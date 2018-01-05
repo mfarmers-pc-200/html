@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>种植模式首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<!-- 引入 Bootstrap -->
+<link href="../../lib/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet"> 
+<link href="../../lib/assets3.21/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../lib/css/reset.css" rel="stylesheet"> 
+<link href="../../lib/css/public.css" rel="stylesheet"> 
+</head>
+<style>
+	.zkuang1{width:100%;border:0px solid red;float:left;line-height:20px;padding-top:25px;}
+	.zkuang1_0{font-size:16px;width:100%;}
+	.zkuang1_1{font-size:14px;width:100%;}
+	.zo{width:89%;float:left}
+	.zo2{font-size:16px;width:11%;height:25%;float:left;border:0px solid red;}
+	.s1{ border-bottom:1px solid #C5C5C5;float:left;width:100%;height:13px;margin-bottom:30px}
+	.le{padding-left:20px}
+	.icon-edit{font-size:16px}
+	.icon-trash{font-size:16px}
+	
+	.zbcolor{ width:100%; height:auto; margin:108px 0; background-color:#fff; padding-bottom:300px; box-shadow: 0 0 2px #ddd;}
+	.zbcolor table{ width:100%; height:auto; }
+	.zbcolor table tr th{ padding:16px 30px; font-weight:bold; color:#333; border-bottom:1px solid #ddd; font-size:14px; text-align:center;border-top: 0px;background-color:#fff}
+	.zbcolor table tr td{padding:16px 30px; font-weight:normal; color:#333;  font-size:14px; text-align:center;border-top: 0px}
+	.table-striped{border:none}
+	.bian{border-bottom:1px solid #ddd;}
+	
+	
+	
+</style>
+<body class="container-fluid"style="background-color:#F5F9FA">	
+	<!-- 通用头部 开始 -->
+	<include src="../../top.html"></include>
+	<!-- 通用头部 结束 -->	
+	<!-- 左侧区域 开始 -->
+	<div class="pull-left le" id="left-box" >
+		<div class = "zkuang1">
+			<div class="zo">
+				<div class="zkuang1_0"><strong>种植模式管理</strong></div>
+				<div class="zkuang1_1">
+					可对种植模式进行添加、修改、保存、删除的操作，操作完成后在发布生产计划中的种植模式下拉菜单中显示。
+				</div>
+			</div>
+			<div class="zo2">
+				<span class ="btn btn-warning btn-block" id="add">+ 添加种植模式</span>
+			</div>
+		</div>
+		<div class="s1"></div>
+		<!---表格--->
+		<div class="zbcolor">
+			<table class="table table-striped table-hover">
+				<tr>
+					<th>序号</th>
+					<th style="text-align:left">种植模式名称</th>
+					<th>编辑</th>
+					<th>删除</th>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td style="text-align:left">浅液流水培</td>
+					<td>
+						<span onclick='edit("1")'><i class="icon-edit" aria-hidden="true"></i></span>
+					</td>
+					<td>
+						<span onclick='del("1")'><i class="icon-trash" aria-hidden="true"></i></span>
+					</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td style="text-align:left">椰糠栽培</td>
+					<td>
+						<i class="icon-edit" aria-hidden="true"></i>
+					</td>
+					<td>
+						<i class="icon-trash" aria-hidden="true"></i>
+					</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td style="text-align:left">草炭土栽培</td>
+					<td>
+						<i class="icon-edit" aria-hidden="true"></i>
+					</td>
+					<td>
+						<i class="icon-trash" aria-hidden="true"></i>
+					</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td style="text-align:left">其它基质栽培</td>
+					<td>
+						<i class="icon-edit" aria-hidden="true"></i>
+					</td>
+					<td>
+						<i class="icon-trash" aria-hidden="true"></i>
+					</td>
+				</tr><tr>
+					<td>5</td>
+					<td style="text-align:left">深液流水培</td>
+					<td>
+						<i class="icon-edit" aria-hidden="true"></i>
+					</td>
+					<td>
+						<i class="icon-trash" aria-hidden="true"></i>
+					</td>
+				</tr>
+				<tr>
+					<td>6</td>
+					<td style="text-align:left">自定义种植模式1</td>
+					<td style="color:green">
+						<i class="icon-edit" aria-hidden="true"></i>
+					</td>
+					<td style="color:orange">
+						<i class="icon-trash" aria-hidden="true"></i>
+					</td>
+				</tr>
+				<tr class="bian">
+					<td>7</td>
+					<td style="text-align:left">自定义种植模式2</td>
+					<td style="color:green">
+						<i class="icon-edit" aria-hidden="true"></i>
+					</td>
+					<td style="color:orange">
+						<i class="icon-trash" aria-hidden="true"></i>
+					</td>
+				</tr>
+				
+				
+			</table>
+		</div>
+	</div>
+	<!-- 左侧区域 结束 -->	
+	<!-- 右侧区域 开始 -->
+	<include src="../../right.html"></include>
+	<!-- 右侧区域 结束 -->
+</body>
+</html>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="../../lib/bootstrap3.3.7/js/jquery1.11.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="../../lib/bootstrap3.3.7/js/bootstrap.min.js"></script>
+<script src="../../lib/layer/layer.js"></script>
+<script src="../../lib/js/ajaxdata.js"></script>
+<script src="../../lib/js/main.js"></script>
+<script src="../../lib/js/dateJs.js"></script>
+<script>
+	/*删除*/
+	function del(id){
+		layer.confirm('是否删除当前种植模式？',{btn:['确定','取消']},function(){
+			
+		})
+	}
+	
+	/*修改*/
+	function edit(id){
+		layer.open({
+			type: 2,
+			title: '编辑种植模式',
+			shadeClose: true,
+			shade: 0.4,
+			area: ['380px', '250px'],
+			content: 'grow1_edit.html'
+		})
+	}
+	
+	$('#add').click(function(){
+		layer.open({
+			type: 2,
+			title: '添加种植模式',
+			shadeClose: true,
+			shade: 0.4,
+			area: ['380px', '250px'],
+			content: 'grow1_add.html'
+		})
+	
+	
+	})
+	
+</script>

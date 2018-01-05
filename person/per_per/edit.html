@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>人员修改</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<!-- 引入 Bootstrap -->
+<link href="../../lib/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet"> 
+<link href="../../lib/assets3.21/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../lib/css/reset.css" rel="stylesheet"> 
+<link href="../../lib/css/public.css" rel="stylesheet"> 
+</head>
+<style>
+.le{width:100%;padding-left:20px}
+.tiao{border:0px solid red;width:100%;float:left;line-height:20px;padding-top:25px}
+.tiao_1{float:left;width:88%}
+.tiao_2{float:left;width:100%;font-size:16px}
+.tiao_3{float:left;width:100%;font-size:14px}
+.tiao_4{float:left;width:12%}
+.s1{border-bottom:1px solid #C5C5C5;float:left;width:100%;height:13px;margin-bottom:30px}	
+.bc{background-color:#F2A553;width:80px;height:30px;color:white;}
+.fh{background-color:#B0C777;width:80px;height:30px;color:white;margin-left:1px}
+.zbcolor{ width:100%; height:auto; margin:108px 0; background-color:#fff; padding-bottom:300px; box-shadow: 0 0 2px #ddd;}	
+.fm{padding-top:45px;}
+.biaoti{border:0px solid red;width:100%;font-size:14px;font-weight:600;padding-left:40px;color:#3C3C3C;margin-bottom:35px}
+.control-label{font-weight:500;}
+.form-group{padding-left:35px;}
+.h{line-height:45px}
+.radio label{padding-left:28px}
+input{margin-top:10px}
+select{margin-top:10px}
+.bell{font-size:12px;color:#F2A553;float:left;padding-top:5px}
+
+</style>
+<body class="container-fluid le"style="background-color:#F5F9FA">	
+	<!-- 通用头部 开始 -->
+	<include src="../../top.html"></include>
+	
+	
+	
+	<!-- 通用头部 结束 -->	
+	<!-- 左侧区域 开始 -->
+	<div class="pull-left le" id="left-box">
+		<div class="tiao">
+			<div class="tiao_1">
+				<div class="tiao_2"><strong>人事管理 | 人员管理 | 编辑人员</strong></div>
+				<div class="tiao_3">可对人员档案进行添加、修改、删除、搜索的操作。</div>
+			</div>
+			<div class="tiao_4">
+				<span class="btn bc">保存</span>
+				<span class="btn fh">返回</span>
+			</div>
+		</div>
+		<div class="s1"></div>
+		<!--内容部分-->
+		<div class="zbcolor">
+			<form class="form-horizontal fm" role="form">
+				<div class="biaoti">1、人员基本信息</div>
+				<div class="form-group h">
+					<label for="" class="col-md-1 control-label">姓名：</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" id="" value="李四">
+					</div>
+				</div>
+				<div class="form-group radio "style="margin-bottom:35px">
+					<label for="" class="col-md-1 control-label">性别：</label>
+					<label style="margin-top:6px;color:#B3C97A">
+						<input type="radio" name="sex" id="" value="" checked > 男
+					</label>
+					<label style="color:#F2A553">
+						<input type="radio" name="sex" id="" value=""> 女
+					</label>
+				</div>
+				<div class="form-group h">
+					<label for="" class="col-md-1 control-label">身份证号：</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" id="" value="370112187604150632">
+					</div>
+				</div>
+				<div class="form-group h">
+					<label for="" class="col-md-1 control-label">手机号：</label>
+					<div class="col-md-2">
+						<input type="text" class="form-control" id="" value="18365405589">
+						
+					</div>
+					<div class="col-md-2">
+						<strong><span class="bell"><i class="icon-bell" aria-hidden="true"></i> 手机号做为登陆账号使用</span></strong>
+					</div>
+				</div>
+				<div class="biaoti">2、部门信息</div>
+				<div class="form-group h">
+					<label for="" class="col-md-1 control-label">职位：</label>
+					<div class="col-md-2 ">
+						<select class="form-control">
+							<option value="">请选择职位</option>
+						    <option value="" selected>工人</option>
+						    <option value="">组长</option>
+						    <option value="">部长</option>
+						</select>
+					</div>
+					<label for="" class="col-md-1 control-label">上级领导：</label>
+					<div class="col-md-2 ">
+						<span>
+							<select class="form-control">
+								<option value="">请选择上级领导</option>
+								<option value="" >王五 总经理</option>
+								<option value="">周杰 部长</option>
+								<option value="" selected>赵钱 组长</option>
+								<option value="">李雪 组长</option>
+							</select>
+						</span>
+					</div>
+				</div>
+			</form>
+		
+		
+		</div>
+		
+	</div>	
+</body>
+</html>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="../../lib/bootstrap3.3.7/js/jquery1.11.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="../../lib/bootstrap3.3.7/js/bootstrap.min.js"></script>
+<script src="../../lib/layer/layer.js"></script>
+<script src="../../lib/js/ajaxdata.js"></script>
+<script src="../../lib/js/main.js"></script>
+<script src="../../lib/js/dateJs.js"></script>

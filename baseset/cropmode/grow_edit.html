@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>种植作物编辑</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<!-- 引入 Bootstrap -->
+<link href="../../lib/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet"> 
+<link href="../../lib/assets3.21/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../lib/css/reset.css" rel="stylesheet"> 
+<link href="../../lib/css/public.css" rel="stylesheet"> 
+<!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+<!--[if lt IE 9]>
+	<script src="./lib/bootstrap3.3.7/js/html5shiv.js"></script>
+	<script src="./lib/bootstrap3.3.7/js/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<body class="container-fluid">	
+	<!-- 通用头部 开始 -->
+	<include src="../../top.html"></include>
+	<!-- 通用头部 结束 -->	
+	<!-- 左侧区域 开始 -->
+	<div class="pull-left" id="left-box" >
+
+		
+	<!--grow_list k-->
+	<style>
+	
+		.main-left-m-top{ width:100%; height:auto; border-bottom:1px solid #d0dadc; padding: 20px 0px;}
+		.main-left-m-top-left{ width:60%; height:auto; float:left; display:inline;}
+		.main-left-m-top-right{ width:40%; height:auto; float:right; display:inline;}		
+		.main-left-m-top-right a{padding:7px 30px; background-color:#f2a553;border-radius:3px; color:#fff; font-size:14px; font-weight:bold; float:right; display:inline; margin-top:12px; margin-left:18px;}
+		.main-left-m-top-right a:visited{
+			color:#fff; text-decoration:none;
+		}
+		.main-left-m-top-right a:hover{
+			color:#fff; text-decoration:none;
+		}
+		.main-left-m-center{ width:100%; height:100%; margin:30px 0; background-color:#fff; padding:10px 0; box-shadow: 0 0 2px #ddd;}
+		.main-left-m-center table{ width:100%; height:auto; }
+		.main-left-m-center table tr th{ padding:12px 26px; font-weight:bold; color:#333; border-bottom:1px solid #ddd; font-size:14px; }
+		.main-left-m-center table tr td{
+			 padding:12px 26px; font-weight:normal; color:#333;  font-size:13px; 
+		}
+		.new-css-ad{ border-right:1px solid #eeeeee; vertical-align: middle!important;  }
+		table tr th,td{ text-align: center; }
+		/**add form**/
+		.add-form-div{ width:94.2%; padding:1% 2.9%; background-color:#fff; height:98%; display:block;}
+		.h4span{ font-weight:normal; font-size:14px;}
+		.control-group{ display:flex; padding:1% 0;}
+		.control-group input{ margin-left:12px; }
+		.control-group textarea{ margin-left:12px; }
+	</style>
+	<div style=" width: 100%; height: 100%; ">
+	<div class="main-left-m-top">
+		<div class="main-left-m-top-left">
+			<H4 style="font-weight:bold; line-height: 30px; ">作物管理&nbsp;&nbsp;<span class="h4span">|&nbsp;&nbsp;添加品种</span></H4>
+			<h6 style="line-height: 20px;">可对种植模式进行添加、修改、保存、删除的操作，操作完成后在发布生产计划中的种植模式下拉接单中显示。			
+			</h6>
+		</div>
+		<div class="main-left-m-top-right">
+			<a href="#" role="button" style="background-color:#b0c777">返&nbsp;&nbsp;回</a>
+			<a href="#" role="button" >保&nbsp;&nbsp;存</a>
+		</div><div style="clear:both"></div>
+	</div>
+
+	<div class="main-left-m-center">
+		<div class="add-form-div">
+		  <form class="form-horizontal">
+			<fieldset>
+			<div class="control-group">
+				  <!-- Text input-->
+				  <label class="control-label" style=" float:left; display:inline;" for="input01">作物</label>
+				  <input type="text" class="form-control" style="width:15%;"  name="username" placeholder="请输入作物名称" >
+			</div>
+		
+			<div class="control-group">
+		
+				  <!-- Text input-->
+				  <label class="control-label" for="input01">果型</label>
+				  <input type="text" class="form-control" style="width:15%;"  name="username" placeholder="请输入果型" >
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="control-label" for="input01">果色</label>
+				  <input type="text" class="form-control" style="width:15%;"  name="username" placeholder="请输入果色" >
+				
+			</div>
+		
+	
+		
+			<div class="control-group">
+		
+				  <!-- Text input-->
+				  <label class="control-label" for="input01">品种</label>
+				  <input type="text" class="form-control" style="width:15%;"  name="username" placeholder="请输入品种" >
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<label class="control-label" for="input01">编号</label>
+				  <input type="text" class="form-control" style="width:15%;"  name="username" placeholder="请输入编号" >
+					
+			</div>
+
+		
+			<div class="control-group">
+				 
+				 <label for="name">描述</label>
+				<textarea class="form-control" style="width:37%;" rows="3"></textarea>
+					
+				  
+			</div>
+		
+			<div class="control-group">	
+					
+				
+			
+				  <label class="control-label">图片</label>
+				  
+				   <div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="file-container" style="display:inline-block;position:relative;overflow: hidden;vertical-align:middle">
+						<span type="button"><img src="../../lib/img/public/cropmode/upload-button.jpg"  ></span>
+						<input type="file" id="jobData" onChange="loadFile(this.files[0])" style="position:absolute;top:0;left:0;font-size:34px; opacity:0">
+					</div>
+					
+				</div>
+				<script>
+				function loadFile(file){
+					$$("#filename").html(file.name);
+				}
+				</script>
+				 
+				  
+			</div>
+			
+			
+		
+			</fieldset>
+		  </form>
+		</div>
+		<div style="clear:both"></div>
+					
+		
+	</div>
+	<div style="clear:both"></div>
+	</div>
+	<!--grow_list o-->
+
+
+
+
+
+	</div>
+	<!-- 左侧区域 结束 -->
+	<!-- 右侧区域 开始
+	<div class="pull-right w400" id="right-box"></div> -->
+	<include src="../../right.html"></include>
+	<!-- 右侧区域 结束 -->
+</body>
+</html>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="../../lib/bootstrap3.3.7/js/jquery1.11.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="../../lib/bootstrap3.3.7/js/bootstrap.min.js"></script>
+<script src="../../lib/layer/layer.js"></script>
+<script src="../../lib/js/ajaxdata.js"></script>
+<script src="../../lib/js/main.js"></script>			
+<script src="../../lib/js/dateJs.js"></script>

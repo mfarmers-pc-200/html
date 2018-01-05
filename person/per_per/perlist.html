@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>人员首页</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<!-- 引入 Bootstrap -->
+<link href="../../lib/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet"> 
+<link href="../../lib/assets3.21/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../lib/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link href="../../lib/css/reset.css" rel="stylesheet"> 
+<link href="../../lib/css/public.css" rel="stylesheet"> 
+<!-- HTML5 Shiv 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+<!--[if lt IE 9]>
+	<script src="./lib/bootstrap3.3.7/js/html5shiv.js"></script>
+	<script src="./lib/bootstrap3.3.7/js/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+</head>
+<style>
+	.le{width:100%;padding-left:20px}
+	.tiao{border:0px solid red;width:100%;float:left;line-height:20px;padding-top:25px}
+	.tiao_1{float:left;width:58%}
+	.tiao_2{float:left;width:100%;font-size:16px}
+	.tiao_3{float:left;width:100%;font-size:14px}
+	.tiao_4{float:right;width:42%}
+	.tiao_5{float:left;width:20%;font-size:14px;margin-right:6px}
+	.se{height:28px;width:110px;color:#A7A7A7}
+	.co{background-color:#B0C777;width:90px;height:30px;color:white;margin-left:5px}
+	.co1{background-color:#F2A553;width:110px;height:30px;color:white;margin-left:9.5px}
+	.s1{ border-bottom:1px solid #C5C5C5;float:left;width:100%;height:13px;margin-bottom:30px}
+	.zbcolor{ width:100%; height:auto; margin:108px 0; background-color:#fff; padding-bottom:300px; box-shadow: 0 0 2px #ddd;}
+	.ul{list-style:none; padding:0px; margin:0px; width:590px;height:20px; line-height:20px; border:1px solid red;border-top:0px; font-size:12px;}
+	.r1{padding-top:10px;border-bottom:1px solid #E1E1E1;padding-bottom:10px}
+	.r2{padding-top:10px;border-bottom:0px solid #E1E1E1;padding-bottom:10px;}
+	.r3{padding-top:10px;border-bottom:0px solid #E1E1E1;padding-bottom:10px;background-color:#F9F9F9}
+	.ul li{display:block; width:33%; float:left;text-indent:2em}
+	.green{color:green}
+	.orange{color:orange}
+</style>
+<body class="container-fluid">	
+	<!-- 通用头部 开始 -->
+	<include src="../../top.html"></include>
+	<!-- 通用头部 结束 -->	
+	<!-- 左侧区域 开始 -->
+	<div class="pull-left le" id="left-box">
+		<div class="tiao">
+			<div class="tiao_1">
+				<div class="tiao_2"><strong>人事管理 | 人员管理</strong></div>
+				<div class="tiao_3">可对人员档案进行添加、修改、删除、搜索的操作。</div>
+			</div>
+			<div class="tiao_4">
+				<span class="tiao_5">
+					<select name="" class="se">
+						<option value="">请选择部门</option>
+					</select>
+				</span>
+				<span class="tiao_5">
+					<select name="" class="se">
+						<option value="">请选择职务</option>
+					</select>
+				</span>
+				<span class="tiao_5">
+					<input type="text" name="" value="" class="se" placeholder="请输入姓名"/>
+				</span>
+				<span class="btn co">
+					<i class="icon-search" aria-hidden="true"></i>搜索
+				</span>
+				<span class="btn co1" onclick='window.open("./add.html")'>
+					+ 添加人员
+				</span>	
+				
+			</div>
+		</div>
+		<div class="s1"></div>
+		<!---表格内容--->
+		<div class="zbcolor">
+			<div class="container-fluid">
+				<div class="row r1">
+					<div class="col-md-2"><strong>部门</strong></div>
+					<div class="col-md-1"><strong>姓名</strong></div>
+					<div class="col-md-1"><strong>性别</strong></div>
+					<div class="col-md-2"><strong>手机号</strong></div>
+					<div class="col-md-2"><strong>身份证号</strong></div>
+					<div class="col-md-1"><strong>职位</strong></div>
+					<div class="col-md-1"><strong>上级</strong></div>
+					<div class="col-md-1"><strong>编辑</strong></div>
+					<div class="col-md-1"><strong>删除</strong></div>
+				</div>
+				<div class="row r2">
+					<div class="col-md-2">生产管理部门</div>
+					<div class="col-md-1">周杰</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-2">18345678910</div>
+					<div class="col-md-2">370115169108069896</div>
+					<div class="col-md-1">部长</div>
+					<div class="col-md-1">王五 总经理</div>
+					<div class="col-md-1 green">
+						<span onclick='window.open("./edit.html")'><i class="icon-edit" aria-hidden="true"></i></span>
+					</div>
+					<div class="col-md-1 orange">
+						<span onclick='del("1")'><i class="icon-trash" aria-hidden="true"></i></span>
+					</div>
+				</div>
+				<div class="row r3">
+					<div class="col-md-2">生产管理部门</div>
+					<div class="col-md-1">赵钱</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-2">16345672315</div>
+					<div class="col-md-2">370115199108169654</div>
+					<div class="col-md-1">组长</div>
+					<div class="col-md-1">周杰 部长</div>
+					<div class="col-md-1 green">
+						<i class="icon-edit" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-1 orange">
+						<i class="icon-trash" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="row r2">
+					<div class="col-md-2">生产管理部门</div>
+					<div class="col-md-1">李四</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-2">15545672313</div>
+					<div class="col-md-2">370115169108069777</div>
+					<div class="col-md-1">工人</div>
+					<div class="col-md-1">赵钱 组长</div>
+					<div class="col-md-1 green">
+						<i class="icon-edit" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-1 orange">
+						<i class="icon-trash" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="row r3">
+					<div class="col-md-2">生产管理部门</div>
+					<div class="col-md-1">赵雪</div>
+					<div class="col-md-1">女</div>
+					<div class="col-md-2">18842672313</div>
+					<div class="col-md-2">370115169311269654</div>
+					<div class="col-md-1">组长</div>
+					<div class="col-md-1">周杰 部长</div>
+					<div class="col-md-1 green">
+						<i class="icon-edit" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-1 orange">
+						<i class="icon-trash" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="row r2">
+					<div class="col-md-2">生产管理部门</div>
+					<div class="col-md-1">王大拿</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-2">18842789654</div>
+					<div class="col-md-2">370115169311260031</div>
+					<div class="col-md-1">工人</div>
+					<div class="col-md-1">赵雪 组长</div>
+					<div class="col-md-1 green">
+						<i class="icon-edit" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-1 orange">
+						<i class="icon-trash" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="row r3">
+					<div class="col-md-2">生产管理部门</div>
+					<div class="col-md-1">刘德华</div>
+					<div class="col-md-1">男</div>
+					<div class="col-md-2">16342672153</div>
+					<div class="col-md-2">370115169311269888</div>
+					<div class="col-md-1">工人</div>
+					<div class="col-md-1">赵雪 组长</div>
+					<div class="col-md-1 green">
+						<i class="icon-edit" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-1 orange">
+						<i class="icon-trash" aria-hidden="true"></i>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	
+	
+	
+	
+	</div>
+	<!-- 左侧区域 结束 -->
+	<!-- 右侧区域 开始 -->
+	<include src="../../right.html"></include>
+	<!-- 右侧区域 结束 -->
+</body>
+</html>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="../../lib/bootstrap3.3.7/js/jquery1.11.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="../../lib/bootstrap3.3.7/js/bootstrap.min.js"></script>
+<script src="../../lib/layer/layer.js"></script>
+<script src="../../lib/js/ajaxdata.js"></script>
+<script src="../../lib/js/main.js"></script>
+<script src="../../lib/js/dateJs.js"></script>
+<script>
+function del(id){
+	layer.confirm('是否删除当前人员',{btn:['确定','取消']},function(){
+		
+	})
+}
+
+//编辑
+
+
+
+
+</script>
